@@ -2,7 +2,6 @@ import React from 'react';
 import './coin.css';
 
 const Coin = ({image, name, symbol, price, volume, priceChange, marketcap}) => {
-  console.log(priceChange);
   return (
     <div className='coin-container'>
       <div className='coin-row'>
