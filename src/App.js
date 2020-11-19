@@ -18,7 +18,6 @@ function App() {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=GBP&order=market_cap_desc&per_page=50&page=1&sparkline=false')
       .then(res => {
         setCoins(res.data);
-        console.log(res.data);
       })
       .catch(error => console.log(error))
   }, []);
@@ -30,8 +29,6 @@ function App() {
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   )
-
-  console.log()
 
   return (
     <div className="App">
